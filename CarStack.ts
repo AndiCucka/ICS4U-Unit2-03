@@ -12,21 +12,21 @@ export class CarStack {
   * The constructor for the CarStack string stack class.
   */
   constructor() {
-    this.stackAsList = []
+    this.strStack = []
   }
 
   /*
   * Checks if stack is empty.
   */
   public get isEmpty() {
-    return this.stackAsList.length == 0
+    return this.strStack.length == 0
   }
 
   /*
   * returns stack size
   */
   public get size() {
-    return this.stackAsList.length
+    return this.strStack.length
   }
   
   /*
@@ -34,8 +34,8 @@ export class CarStack {
   */
   public get showStack() {
     let values = ""
-    for (let counter = 0; counter < this.stackAsList.length; counter++) {
-      values = values + this.stackAsList[counter] + ", "
+    for (let counter = 0; counter < this.strStack.length; counter++) {
+      values = values + this.strStack[counter] + ", "
     }
     values = values.substring(0, values.length-2)
     return values
@@ -45,13 +45,13 @@ export class CarStack {
   * pushes a string onto the stack
   */
   public push(input) {
-    this.stackAsList.push(input)
+    this.strStack.push(input)
   }
 
   /*
   * pops a string from the stack
   */
-  public pop() {
+  public popItem() {
     let removed = ""
     // checks if there's at least 1 element in the stack
     if (self.strStack.length > 0) {
