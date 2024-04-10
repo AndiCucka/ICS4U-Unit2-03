@@ -16,14 +16,7 @@ public class CarStack {
     /**
     * Declares a private instance variable.
     */
-    private List<Object> stackAsList;
-
-    /**
-    * The constructor().
-    */
-    public CarStack() {
-        stackAsList = new ArrayList<>();
-    }
+    private List<String> stackAsList = new ArrayList<>();
 
     /**
     * Checks if stack is empty.
@@ -49,23 +42,14 @@ public class CarStack {
     * @return the values as a string
     */
     public String showStack() {
-        // StringBuilder to efficiently build the string representation
-        final StringBuilder values = new StringBuilder();
-        
-        // Iterate through the stack elements
+        String values = "";
         for (int counter = 0; counter < stackAsList.size(); counter++) {
-            // Append each element followed by a comma and space
-            values.append(stackAsList.get(counter)).append(", ");
+            values += stackAsList.get(counter);
+            if (counter < stackAsList.size() - 1) {
+                values += ", ";
+            }
         }
-        
-        // If there are elements in the StringBuilder
-        if (values.length() > 0) {
-            // Remove the trailing comma and space
-            values.delete(values.length() - 2, values.length());
-        }
-        
-        // Return the string representation of the stack
-        return values.toString();
+    return values;
     }
 
     /**
@@ -73,7 +57,7 @@ public class CarStack {
     *
     * @param input from Main.java
     */
-    public void push(Object input) {
+    public void push(String input) {
         stackAsList.add(input);
     }
 
@@ -82,8 +66,8 @@ public class CarStack {
     *
     * @return the popped string
     */
-    public Object popItem() {
-        final Object poppedItem;
+    public String popItem() {
+        final String poppedItem;
         if (!stackAsList.isEmpty()) {
             poppedItem = stackAsList.remove(stackAsList.size() - 1);
         } else {
