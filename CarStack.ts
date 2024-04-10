@@ -16,7 +16,7 @@ export class CarStack {
   }
 
   /*
-  * Checks if stack is empty.
+  * Check if the stack is empty.
   */
   public get isEmpty() {
     return this.strStack.length == 0
@@ -54,8 +54,8 @@ export class CarStack {
   public popItem() {
     let removed = ""
     // checks if there's at least 1 element in the stack
-    if (self.strStack.length > 0) {
-      removed = self.strStack[self.strStack.length - 1]
+    if (this.strStack.length > 0) {
+      removed = this.strStack[this.strStack.length - 1]
     } else {
       removed = "nothing to remove";
     }
