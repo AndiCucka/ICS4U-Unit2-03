@@ -30,8 +30,8 @@ final class Main {
         // constants
         final String fruitsString = "fruits: ";
         final String poppedString = "popped: ";
-        final String coloursString = "colours: ";
-        final String shapesString = "shapes: ";
+        final String colorsString = "colors: ";
+        final String carsString = "cars: ";
         final String lengthString = "length: ";
         final String isEmptyString = "is empty: ";
 
@@ -46,30 +46,30 @@ final class Main {
         System.out.println(isEmptyString + fruits.isEmpty());
         System.out.println("");
 
-        final CarStack colours = new CarStack();
-        colours.push("red");
-        colours.push("green");
-        colours.push("blue");
-        System.out.println(coloursString + colours.showStack());
-        System.out.println(poppedString + colours.popItem());
-        System.out.println(poppedString + colours.popItem());
-        System.out.println(coloursString + colours.showStack());
-        System.out.println(lengthString + colours.size());
-        System.out.println(isEmptyString + colours.isEmpty());
+        final CarStack colors = new CarStack();
+        colors.push("red");
+        colors.push("green");
+        colors.push("blue");
+        System.out.println(colorsString + colors.showStack());
+        System.out.println(poppedString + colors.popItem());
+        System.out.println(poppedString + colors.popItem());
+        System.out.println(colorsString + colors.showStack());
+        System.out.println(lengthString + colors.size());
+        System.out.println(isEmptyString + colors.isEmpty());
         System.out.println("");
 
-        final CarStack shapes = new CarStack();
-        shapes.push("BMW");
-        shapes.push("Ford");
-        shapes.push("Mazda");
-        System.out.println(shapesString + shapes.showStack());
-        System.out.println(poppedString + shapes.popItem());
-        System.out.println(poppedString + shapes.popItem());
-        System.out.println(poppedString + shapes.popItem());
-        System.out.println(poppedString + shapes.popItem());
-        System.out.println(shapesString + shapes.showStack());
-        System.out.println(lengthString + shapes.size());
-        System.out.println(isEmptyString + shapes.isEmpty());
+        final CarStack cars = new CarStack();
+        cars.push("BMW");
+        cars.push("Ford");
+        cars.push("Mazda");
+        System.out.println(carsString + cars.showStack());
+        System.out.println(poppedString + cars.popItem());
+        System.out.println(poppedString + cars.popItem());
+        System.out.println(poppedString + cars.popItem());
+        System.out.println(poppedString + cars.popItem());
+        System.out.println(carsString + cars.showStack());
+        System.out.println(lengthString + cars.size());
+        System.out.println(isEmptyString + cars.isEmpty());
         System.out.println("");
 
         System.out.println("\nDone.");
