@@ -18,16 +18,16 @@ console.log("length: " + fruits.size)
 console.log("is empty: " + fruits.isEmpty)
 console.log("")
 
-let colours = new CarStack()
-colours.push("red")
-colours.push("green")
-colours.push("blue")
-console.log("colours: " + colours.showStack)
-console.log("popped: " + colours.popItem())
-console.log("popped: " + colours.popItem())
-console.log("colours: " + colours.showStack)
-console.log("length: " + colours.size)
-console.log("is empty: " + colours.isEmpty)
+let colors = new CarStack()
+colors.push("red")
+colors.push("green")
+colors.push("blue")
+console.log("colors: " + colors.showStack)
+console.log("popped: " + colors.popItem())
+console.log("popped: " + colors.popItem())
+console.log("colors: " + colors.showStack)
+console.log("length: " + colors.size)
+console.log("is empty: " + colors.isEmpty)
 console.log("")
 
 let cars = new CarStack()
@@ -45,6 +45,4 @@ console.log("is empty: " + cars.isEmpty)
 console.log("")
 
 console.log("\nDone.")
-
-
 
