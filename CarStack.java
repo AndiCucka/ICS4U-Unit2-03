@@ -16,15 +16,15 @@ public class CarStack {
     /**
     * Declares a private instance variable.
     */
-    private List<String> stackAsList = new ArrayList<>();
+    private List<String> strStack = new ArrayList<>();
 
     /**
-    * Checks if stack is empty.
+    * Checks if the stack is empty.
     *
     * @return true if the stack is empty, false otherwise
     */
     public boolean isEmpty() {
-        return stackAsList.isEmpty();
+        return strStack.isEmpty();
     }
 
     /**
@@ -33,7 +33,7 @@ public class CarStack {
     * @return the size of the stack
     */
     public int size() {
-        return stackAsList.size();
+        return strStack.size();
     }
 
     /**
@@ -43,9 +43,9 @@ public class CarStack {
     */
     public String showStack() {
         String values = "";
-        for (int counter = 0; counter < stackAsList.size(); counter++) {
-            values += stackAsList.get(counter);
-            if (counter < stackAsList.size() - 1) {
+        for (int counter = 0; counter < strStack.size(); counter++) {
+            values += strStack.get(counter);
+            if (counter < strStack.size() - 1) {
                 values += ", ";
             }
         }
@@ -58,7 +58,7 @@ public class CarStack {
     * @param input from Main.java
     */
     public void push(String input) {
-        stackAsList.add(input);
+        strStack.add(input);
     }
 
     /**
@@ -68,8 +68,11 @@ public class CarStack {
     */
     public String popItem() {
         final String poppedItem;
-        if (!stackAsList.isEmpty()) {
-            poppedItem = stackAsList.remove(stackAsList.size() - 1);
+        if (!strStack.isEmpty()) {
+            // assigns variable to last character
+            poppedItem = strStack.remove(strStack.size() - 1);
+            // removes last character
+            this.strStack.splice(-1)
         } else {
             poppedItem = null;
         }
