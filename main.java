@@ -59,9 +59,9 @@ final class Main {
         System.out.println("");
 
         final CarStack shapes = new CarStack();
-        shapes.push("Mazda");
         shapes.push("BMW");
         shapes.push("Ford");
+        shapes.push("Mazda");
         System.out.println(shapesString + shapes.showStack());
         System.out.println(poppedString + shapes.popItem());
         System.out.println(poppedString + shapes.popItem());
@@ -75,6 +75,3 @@ final class Main {
         System.out.println("\nDone.");
     }
 }
-
-
-
